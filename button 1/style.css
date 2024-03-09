@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gillroy;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+    padding: 5vw;
+}
+
+button{
+    background-color: transparent;
+    padding: 10px 20px;
+    color: cyan;
+    font-weight: 400;
+    border: 2px solid cyan;
+    text-transform: uppercase;
+    position: relative;
+    transition: all linear 0.5s;
+    transition-delay: 1s;
+}
+
+button::after{
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: rgb(231, 28, 17);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all linear 0.5s;
+    transition-duration: 1.5s;
+
+}
+
+button:hover::after{
+    width: 100%;
+    background-color: rgb(255, 187, 0);
+
+}
+
+button:hover{
+    color: black;
+}
